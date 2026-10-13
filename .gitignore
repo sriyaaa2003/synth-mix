@@ -1,0 +1,9 @@
+data/
+kaggle/stage_data/*.zip
+kaggle_out/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+results/*.log
+results/runs_smoke/
+results/figures/gen_smoke.jpg

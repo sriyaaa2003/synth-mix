@@ -1,0 +1,28 @@
+# Every tunable lives here; nothing is hard-coded in src/.
+[data]
+bdd_dir = "data/bdd"       # images/, manifest.csv, samples.json: see the README for how to build it
+out_dir = "data"
+width = 640
+height = 360
+classes = ["car", "truck", "bus", "pedestrian", "rider", "bicycle", "motorcycle"]
+split_fracs = [0.6, 0.1, 0.3]     # train / val / test, split by video so no clip is in two sets
+seed = 20261012
+adverse_weather = ["rainy", "snowy", "foggy"]
+
+[generate]
+n_source = 3000                   # real training images that get one weather/night edit
+edits = ["fog", "night", "rain", "snow"]
+gen_width = 768
+steps = 25
+guidance = 7.5
+depth_scale = 1.0
+canny_scale = 1.0
+batch = 12
+gpu = "A10G"
+
+[train]
+epochs = 30
+batch = 32
+imgsz = 640
+total_images = 3000               # real + synthetic images per run in the fixed-budget experiments
+seeds = [0, 1, 2]

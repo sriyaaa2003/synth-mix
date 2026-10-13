@@ -1,0 +1,22 @@
+[project]
+name = "synthmix"
+version = "0.1.0"
+description = "How much synthetic weather imagery should go into a detector training set, and which images?"
+requires-python = ">=3.11"
+dependencies = ["numpy", "pandas", "scipy", "matplotlib", "opencv-python-headless", "tabulate"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+generate = ["modal"]                       # image generation runs on a Modal GPU
+train = ["ultralytics==8.3.40"]           # YOLOv8 training and evaluation (any GPU machine)
+drift = ["dgeo @ git+https://github.com/sriyaaa2003/driving-geometry"]   # geometry-drift metrics
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
