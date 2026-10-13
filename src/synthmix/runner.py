@@ -1,4 +1,4 @@
-"""Run the training grid on any machine with a GPU (Kaggle, Colab, local). Same logic as train_modal.py.
+"""Run the training grid on any machine with a GPU (Kaggle, Colab, local).
 
     python runner.py --data /kaggle/working/data --specs /kaggle/working/data/specs_all.json --out /kaggle/working/runs
 
