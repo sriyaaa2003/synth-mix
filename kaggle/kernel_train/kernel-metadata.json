@@ -1,0 +1,18 @@
+{
+ "id": "saf2003/synthmix-train",
+ "title": "synthmix train",
+ "code_file": "train_kernel.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": "true",
+ "enable_gpu": "true",
+ "enable_tpu": "false",
+ "enable_internet": "true",
+ "machine_shape": "NvidiaTeslaT4",
+ "dataset_sources": [
+  "saf2003/synthmix-data"
+ ],
+ "competition_sources": [],
+ "kernel_sources": [],
+ "model_sources": []
+}
